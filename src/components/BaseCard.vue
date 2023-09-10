@@ -1,6 +1,9 @@
 <template>
     <div>
-        <slot></slot>
+     <header>
+        <slot name="headerslot"></slot>
+    </header>
+    <slot></slot>
     </div>
 </template>
 
@@ -25,6 +28,13 @@ export default {
 </script>
 
 <style lang="css" scoped>
+
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
 div {
   margin: 2rem auto;

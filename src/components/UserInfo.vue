@@ -1,20 +1,26 @@
 <template>
   <section>
     <BaseCard>
-    <header>
+    <template v-slot:headerslot>
     
       <h3>{{ fullName }}</h3>
       <base-badge :type="role" :caption="role.toUpperCase()"></base-badge>
     
-  </header>
+  </template>
+
+  <template v-slot:default>
+    
+
 
   <p>{{ infoText }}</p>
+</template>
 </BaseCard>
   
   </section>
 </template>
 
 <script>
+
 
 
 
@@ -37,9 +43,5 @@ components:{
 <style scoped>
 
 
-section header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+
 </style>
