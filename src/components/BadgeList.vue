@@ -1,5 +1,5 @@
 <template>
-  <section>
+  
     <BaseCard>
      <template v-slot:headerslot>
     
@@ -20,7 +20,7 @@
     </ul>
   </template>
   </BaseCard>
-  </section>
+  
 </template>
 
 <script>
