@@ -15,7 +15,7 @@
         <base-badge type="admin" caption="admin"></base-badge>
       </li>
       <li>
-        <base-badge type="author" caption="AUTHOR"></base-badge>
+        <base-badge type="author" caption="author"></base-badge>
       </li>
     </ul>
   </template>
