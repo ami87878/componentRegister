@@ -65,7 +65,7 @@ methods:{
 
 section h2 {
   margin: 0.5rem 0;
-  color: #4b4848;
+  color: #5f5858;
 }
 ul {
   list-style: none;
