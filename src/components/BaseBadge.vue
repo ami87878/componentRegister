@@ -26,12 +26,12 @@ export default {
 }
 
 .badge--admin {
-  background-color: #d4256e;
-  color: white;
+  background-color: #be2f6b;
+  color: rgb(240, 220, 220);
 }
 
 .badge--author {
-  background-color: #002c8a;
+  background-color: #0f46be;
   color: white;
 }
 </style>
