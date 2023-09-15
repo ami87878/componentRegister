@@ -1,6 +1,6 @@
 <template>
     <div>
-     <header>
+     <header v-if="$slots.headerslot">
         <slot name="headerslot"></slot>
     </header>
     <slot></slot>
@@ -19,6 +19,7 @@ export default {
 
     mounted() {
         
+      console.log(this.$slots.headerslot)
     },
 
     methods: {

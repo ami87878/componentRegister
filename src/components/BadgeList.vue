@@ -7,7 +7,7 @@
 
   </template>
 
-  <template v-slot:default>
+  <template #default>
     
 
     <ul>
