@@ -9,7 +9,7 @@
     ></UserInfo>
     <CourseGoals>
       <template v-slot="goalprop">
-        <h2></h2>
+        <h2>{{ goalprop }}</h2>
         
       </template>
     </CourseGoals>
