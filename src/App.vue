@@ -9,7 +9,7 @@
     ></UserInfo>
     <CourseGoals>
       <template v-slot="goalprop">
-        <h2>{{ goalprop }}</h2>
+        <h2>{{ goalprop.goalprop }}</h2><!--render list that the data not exist in  App but in  child---> 
         
       </template>
     </CourseGoals>
