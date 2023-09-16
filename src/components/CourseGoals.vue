@@ -1,6 +1,10 @@
 <template>
     <ul>
-        
+ <li v-for='goal in goals' :key="goal" >
+    <slot  :goalprop="goal" anotherslot="..."> </slot>
+
+   
+</li>       
     </ul>
 </template>
 
@@ -11,6 +15,7 @@ export default {
     data() {
         return {
             
+            goals:['Finish course ','Learn Vue'],
         };
     },
 
