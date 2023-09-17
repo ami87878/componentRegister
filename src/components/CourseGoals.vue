@@ -1,7 +1,7 @@
 <template>
     <ul>
- <li v-for='goal in goals' :key="goal" >
-    <slot  :goalprop="goal" anotherProp="..."> </slot>
+ <li v-for='goal in goals' :key="goal">
+    <slot  :goalprop="goal" anotherProp="...Mean this is a other component "> </slot>
 
    
 </li>       
