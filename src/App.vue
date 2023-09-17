@@ -3,8 +3,9 @@
     <TheHeader></TheHeader>
     <button v-on:click="setelectedComponent('ActiveGoal')">Active goals</button>
     <button @click="setelectedComponent('ManageGoals')">Manage goals</button>
-   <active-goal  v-if="setelect==='ActiveGoal'"></active-goal>
-   <manage-goals  v-if="setelect==='ManageGoals'"></manage-goals>
+   <!-- <active-goal  v-if="setelect==='ActiveGoal'"></active-goal>
+   <manage-goals  v-if="setelect==='ManageGoals'"></manage-goals> -->
+    <component :is="setelect"></component>
   </div>
 </template>
 
