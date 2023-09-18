@@ -4,6 +4,7 @@
             <h2>Manage Goals</h2>
             <input type="text" name="" id="" ref="goal">
             <button  @click="setGoal" >set goal</button>
+            <teleport to='#app' />
             <ErrorAlert v-if="inputIsInValid">
 
                 <h2 >input is invalid</h2>
@@ -12,6 +13,7 @@
              
 
             </ErrorAlert>
+            <teleport/>
            
 </div>
     </div>
