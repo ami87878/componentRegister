@@ -8,6 +8,7 @@
 
                 <h2 >input is invalid</h2>
                 <p>Enter atleast a few character</p>
+                <button  @click="confirmError">Ok </button>
              
 
             </ErrorAlert>
@@ -53,7 +54,15 @@ export default {
         }
 
 
-    }        
+    }  ,
+    
+    confirmError(){
+
+        this.inputIsInValid=false
+
+
+
+    }
         
     },
 };

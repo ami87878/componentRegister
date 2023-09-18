@@ -36,8 +36,10 @@ dialog{
     left: 30%;
     width: 40%;
     background-color: white;
-    box-shadow: 0 2px 8px rgb(0, 0, 0.26);
+    box-shadow: 0 2px 8px rgb(34, 163, 185);
     padding: 1rem;
+    margin: 0;
+    border-radius: 0.4rem;
 }
 
 </style>
