@@ -1,6 +1,6 @@
 <template>
     <div>
-        <dialog>
+        <dialog open>
             <slot></slot> <!--content  is flexible-->
         </dialog>
     </div>

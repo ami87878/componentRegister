@@ -7,6 +7,7 @@
             <ErrorAlert v-if="inputIsInValid">
 
                 <h2 >input is invalid</h2>
+                <p>Enter atleast a few character</p>
              
 
             </ErrorAlert>
