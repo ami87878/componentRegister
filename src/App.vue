@@ -2,16 +2,18 @@
   
   <!--pass array props to component-->
   <the-header title='Review Me'></the-header>
- 
+  <TheResourses></TheResourses>
+  
   
 </template>
 
 <script>
   
 
-import TheHeader from './components/layouts/TheHeader.vue'
-export default {
+import TheHeader from './components/layouts/TheHeader.vue';
+import TheResourses from './components/TheResourses.vue';
 
+export default {
 
 name:'App',
 
@@ -19,7 +21,7 @@ name:'App',
   components:{
 
     TheHeader,
-  
+    TheResourses, 
     
 
   },
@@ -27,23 +29,7 @@ name:'App',
     return {
     
 
-      resourse: [ {
-                id:'official-guide',
-                title:'Official Guide',
-                description:'the official Vue js documentation ',
-                link:'https://vuejs.org'
-
-            },
-
-            {
-                id:'google',
-                title:'google Guide',
-                description:'the google search engine ',
-                link:'https://google.com'
-
-            },
-],
-
+     
 
     };
   },

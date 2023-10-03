@@ -27,7 +27,7 @@ export default {
      LearenResourse,
 
     },
-    props:['storeresourse'],// props  that come from App
+    inject:['resourses'],// props  that come from App
 
     data() {
         return {
