@@ -1,66 +1,73 @@
 <template>
-  <div>
-    <TheHeader></TheHeader>
-    <button v-on:click="setelectedComponent('ActiveGoal')">Active goals</button>
-    <button @click="setelectedComponent('ManageGoals')">Manage goals</button>
-   <!-- <active-goal  v-if="setelect==='ActiveGoal'"></active-goal>
-   <manage-goals  v-if="setelect==='ManageGoals'"></manage-goals> -->
-   <keep-alive>
-     <component :is="setelect"></component>
-   
-   </keep-alive>
-  </div>
+  
+  <!--pass array props to component-->
+  <the-header title='Review Me'></the-header>
+ 
+  
 </template>
 
 <script>
+  
 
-
-import TheHeader   from "./components/TheHeader.vue";
-import ActiveGoal from './components/ActiveGoal.vue'
-import ManageGoals from './components/ManageGoals.vue'
+import TheHeader from './components/layouts/TheHeader.vue'
 export default {
+
+
+name:'App',
+
 
   components:{
 
     TheHeader,
-    ActiveGoal,
-    ManageGoals,
-    
+  
     
 
   },
   data() {
     return {
-      setelect:'ActiveGoal',
+    
 
-      activeUser: {
-        name: 'Amirhossein khanmohammadi',
-        description: 'Site owner and admin',
-        role: 'admin',
-      },
+      resourse: [ {
+                id:'official-guide',
+                title:'Official Guide',
+                description:'the official Vue js documentation ',
+                link:'https://vuejs.org'
+
+            },
+
+            {
+                id:'google',
+                title:'google Guide',
+                description:'the google search engine ',
+                link:'https://google.com'
+
+            },
+],
+
+
     };
   },
 
   methods:{
 
-    setelectedComponent(cmp){
-
-      this.setelect=cmp;
-
-
-
-
-    }
+   
   }
 };
 </script>
 
-<style>
+<style  lang="css">
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
 html {
-  font-family: sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 body {
   margin: 0;
 }
+
 </style>
