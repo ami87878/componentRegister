@@ -1,7 +1,7 @@
 <template>
     <div>
         <ul>
-    <learen-resourse v-for="item in storeresourse"
+    <learen-resourse v-for="item in resourses"
      :key="item.id"
      :title="item.title"
      :description="item.description"

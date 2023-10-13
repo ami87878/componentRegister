@@ -2,7 +2,7 @@
   
   <!--pass array props to component-->
   <the-header title='Review Me'></the-header>
-  <TheResourses></TheResourses>
+  <the-resourses></the-resourses>
   
   
 </template>
@@ -11,7 +11,7 @@
   
 
 import TheHeader from './components/layouts/TheHeader.vue';
-import TheResourses from './components/TheResourses.vue';
+import TheResourses from './components/TheResourses.vue'
 
 export default {
 

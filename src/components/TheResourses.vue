@@ -9,7 +9,7 @@
 </template>
 
 <script>
-
+ 
 import StoredResourses  from "./StoredResourses.vue";
 import AddResourses from './AddResourses.vue'
 export default {
