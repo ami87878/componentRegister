@@ -1,9 +1,9 @@
 <template>
     <base-card>
-        <div class="form-control">
+        <div class="form-control" @submit.prevent="submitData">
             <form>
                 <label for="v">Title</label>
-                    <input  id='title' type="text" name="title">
+                    <input  id='title' type="text" name="title" ref="titleInput" >
                 
             </form>
         </div>
@@ -11,14 +11,14 @@
         <div class="form-control">
             <form>
                 <label for="Describtion">Describtion </label>
-                <textarea name="Describtion" id="Describtion"  rows="3"></textarea>
+                <textarea name="Describtion" id="Describtion"  rows="3" ref="DescribtionInput" ></textarea>
                 
             </form>
         </div>
         <div class="form-control">
             <form>
                 <label for="Link">Link </label>
-                <input name="Link" id="Link" type="url" />
+                <input name="Link" id="Link" type="url"  ref="LinkInput"/>
                 
             </form>
         </div>
@@ -34,9 +34,11 @@
 export default {
     name: 'AddResourses',
 
+    inject:['addResourceTochild'],
     data() {
         return {
-            
+          
+        
         };
     },
 
@@ -45,6 +47,16 @@ export default {
     },
 
     methods: {
+
+        submitData(){
+
+            const titleDta=this.$refs.titleInput.value;
+            const DescribtionData=this.$refs.DescribtionInput.value;
+            const Linkdata=this.$refs.LinkInput.value;
+            
+            this.addResourceTochild(titleDta,DescribtionData,Linkdata),
+
+        }
         
     },
 };
