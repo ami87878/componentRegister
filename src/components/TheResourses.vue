@@ -1,119 +1,121 @@
 <template>
 
-       <base-card>
-            <base-button @click="setSelectedTab('stored-resourses')" :mode="storeResButtonMode">Stored Resourses</base-button>
-            <base-button @click="setSelectedTab('add-resourses')" :mode="addResButtonMode">Add Resourses </base-button>
-        </base-card>
-        <keep-alive>
-            <component :is="selectedTab"></component>
-            
-        </keep-alive>
+    <base-card>
+             <base-button @click="setSelectedTab('stored-resourses')" :mode="storeResButtonMode">Stored Resourses</base-button>
+             <base-button @click="setSelectedTab('add-resourses')" :mode="addResButtonMode">Add Resourses </base-button>
+     </base-card>
+     <keep-alive>
+         <component :is="selectedTab"></component>
+         
+     </keep-alive>
 
 </template>
 
 <script>
- 
+
 import StoredResourses  from "./StoredResourses.vue";
-import AddResourses from './AddResourses.vue'
+import AddResourses from "./AddResourses.vue"
 export default {
 
-    name:'TheResourses',
-    components:{
+ name:'TheResourses',
+ components:{
 
-        StoredResourses, 
-        AddResourses, 
-    },
-   
+     StoredResourses, 
+     AddResourses, 
+ },
 
-    data() {
-        return {
-            
-            selectedTab:'stored-resourses',
 
-            resourse: [ {
-                id:'official-guide',
-                title:'Official Guide',
-                description:'the official Vue js documentation ',
-                link:'https://vuejs.org'
+ data() {
+     return {
+         
+         selectedTab:'stored-resourses',
 
-            },
+         resourse: [ {
+             id:'official-guide',
+             title:'Official Guide',
+             description:'the official Vue js documentation ',
+             link:'https://vuejs.org'
 
-            {
-                id:'google',
-                title:'google Guide',
-                description:'the google search engine ',
-                link:'https://google.com'
+         },
 
-            },
+         {
+             id:'google',
+             title:'google Guide',
+             description:'the google search engine ',
+             link:'https://google.com'
+
+         },
 ],
 
 
-            
+         
 
 
-        };
-    },
+     };
+ },
 
-    mounted() {
+ mounted() {
+     
+ },
+
+ computed:{
+
+     storeResButtonMode(){
+
         
-    },
+         return this.selectedTab==='stored-resourses' ? null : 'flat';
+         
 
-    computed:{
+     },
 
-        storeResButtonMode(){
+     addResButtonMode(){
 
-           
-            return this.selectedTab==='stored-resourses' ? null : 'flat';
-            
+         return this.selectedTab==='add-resourses' ?  null :'flat';
 
-        },
-
-        addResButtonMode(){
-
-            return this.selectedTab==='add-resourses' ?  null :'flat';
-
-        }
-        
-    },
+     }
+     
+ },
 
 
 
-    provide(){
+ provide(){
 
-        return{
+     return{
 
-            resourses:this.resourse,
-            addResourceTochild:this.addResource,
-            
+         resourses:this.resourse,
+         addResource:this.addResource,
+         
 
-        };
-
-
-    },
-    methods: {
-        
-        setSelectedTab(tab){
-
-             this.selectedTab=tab;
-
-        },
+     };
 
 
-       addResource(title,description,url){
-        
-     const newResource={
+ },
 
-            id:new Date().toISOString,
-            title:title,
-            description:description,
-            link:url,
+ methods: {
+     
+     setSelectedTab(tab){
 
-             }
-             this.resourse.unshift(newResource),
-             this.selectedTab='stored-resourses'
-        }
+          this.selectedTab=tab;
 
-    },
+     },
+
+
+    addResource(title,description,url){
+     
+  const newResource={
+
+         id:new Date().toISOString(),
+         title:title,
+         description:description,
+         link:url,
+
+          }
+
+          this.resourse.unshift(newResource),
+          this.selectedTab='stored-resourses'
+     }
+
+ },
 };
 </script>
 
