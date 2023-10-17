@@ -16,7 +16,7 @@
 
 <script>
 
-import LearenResourse from './LearenResourse.vue';
+import LearenResourse from "./LearenResourse.vue";
 
 export default {
     
@@ -24,7 +24,8 @@ export default {
 
     components:{
 
-     LearenResourse,
+      LearenResourse,
+     
 
     },
     inject:['resourses'],// props  that come from App
