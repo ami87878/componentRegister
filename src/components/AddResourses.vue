@@ -1,18 +1,29 @@
 <template>
     <base-dialog v-if="inputIsInvalid" title="Invalid Input">
     
-    <template >
+    <template #default >
       
       
-      <p>at least write something  in empty field</p>
-      <p>please check your input  and make sure you enter at leat  one input </p>
+      <section>
+       
+          <p>at least write something  in empty field</p>
+          <p>please check your input  and make sure you enter at leat  one input </p>
+  
       
+      <base-button @click="confirmError">Okay</base-button>
+    
+    </section>
       
     </template>
     
+    
+  
+      
+
+  
+
         
         
-          <base-button @click="confirmError">Okay</base-button>
         
        
 
@@ -55,9 +66,13 @@
 </template>
 
 <script>
+
 export default {
 
+
     name: 'AddResourses',
+
+    
 
     inject:['addResource'],
 
