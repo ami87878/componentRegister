@@ -1,9 +1,30 @@
 <template>
+    <base-dialog v-if="inputIsInvalid" title="Invalid Input">
+    
+    <template >
+      
+      
+      <p>at least write something  in empty field</p>
+      <p>please check your input  and make sure you enter at leat  one input </p>
+      
+      
+    </template>
+    
+        
+        
+          <base-button @click="confirmError">Okay</base-button>
+        
+       
+
+
+</base-dialog>
     <base-card>
     <form  @submit.prevent="submitData">
         <div class="form-control" >
+
                 <label for="title">Title</label>
-                    <input  id='title' type="text" name="title" ref="titleInput" >
+
+                    <input  id='title' type="text" name="title" ref="titleInput">
                 
                 </div>
                 
@@ -23,7 +44,7 @@
         
         </div>
 
-                   <div>
+                 <div>
                         <base-button type="submit"> Add Resourse</base-button>
                  </div>
     </form>
@@ -35,13 +56,15 @@
 
 <script>
 export default {
+
     name: 'AddResourses',
 
     inject:['addResource'],
+
     data() {
         return {
           
-        
+          inputIsInvalid:false,
         };
     },
 
@@ -57,15 +80,23 @@ export default {
             const DescribtionData=this.$refs.DescribtionInput.value;
             const Linkdata=this.$refs.LinkInput.value;
 
-            if(titleDta.trim()===''||DescribtionData.trim()===''|| Linkdata.trim()===''){
+            if(titleDta.trim()==='' || DescribtionData.trim()==='' || Linkdata.trim()===''){
 
-            <base-dialog></base-dialog>
+              this.inputIsInvalid=true;
 
                 return;
 
             }
+
+
             this.addResource(titleDta,DescribtionData,Linkdata);
 
+        },
+
+        confirmError(){
+
+
+          this.inputIsInvalid=false;
         }
         
     },
@@ -89,11 +120,13 @@ textarea {
   border: 1px solid #ccc;
 }
 
+
 input:focus,
 textarea:focus {
   outline: none;
   border-color: #3a0061;
   background-color: #f7ebff;
+  
 }
 
 .form-control {
