@@ -5,7 +5,7 @@
         <base-card> <!-- base card that  have slot  -->
         <header>
                 <h3>{{ title }}</h3>
-                <base-button mode="flat">Delete</base-button>
+                <base-button mode="flat" @click="removeResourse(id)">Delete</base-button>
         </header>
                 <p>{{ description }}</p>
                 <nav>
@@ -32,7 +32,9 @@ export default {
     //     BaseCard,
     // },
 
-    props:['link','title','description'],
+    props:['id','link','title','description'],
+
+    inject:['removeResourse'],
 
     data() {
         return {
