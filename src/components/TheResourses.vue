@@ -45,6 +45,8 @@ export default {
              link:'https://google.com'
 
          },
+
+         
 ],
 
 
@@ -84,7 +86,7 @@ export default {
 
          resourses:this.resourse,
          addResource:this.addResource,
-         
+         removeResourse:this.removeResourse,
 
      };
 
@@ -113,7 +115,16 @@ export default {
 
           this.resourse.unshift(newResource),
           this.selectedTab='stored-resourses'
-     }
+     },
+
+     removeResourse(resId){
+
+        const resIndex=this.resourse.findIndex(item=>item.id===resId);
+        this.resourse.splice(resIndex,1);
+        
+
+
+   }
 
  },
 };
