@@ -4,6 +4,7 @@
     <learen-resourse v-for="item in resourses"
      :key="item.id"
      :title="item.title"
+     :id="item.id"
      :description="item.description"
      :link="item.link"
      > <!--component that render list  from props that come from App-->
